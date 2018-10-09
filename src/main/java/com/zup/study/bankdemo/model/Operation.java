@@ -21,11 +21,11 @@ public class Operation extends Audit {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_origin_id")
-    public Account accountOrigin;
+    public Account accountOriginId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_target_id", nullable = false)
-    public Account accountTarget;
+    public Account accountTargetId;
 
 
     public Long getId() {
@@ -53,19 +53,19 @@ public class Operation extends Audit {
         this.value = value;
     }
 
-    public Account getAccountOrigin() {
-        return accountOrigin;
+    public Account getAccountOriginId() {
+        return accountOriginId;
     }
 
-    public void setAccountOrigin(Account accountOrigin) {
-        this.accountOrigin = accountOrigin;
+    public void setAccountOriginId(Account accountOriginId) {
+        this.accountOriginId = accountOriginId;
     }
 
-    public Account getAccountTarget() {
-        return accountTarget;
+    public Account getAccountTargetId() {
+        return accountTargetId;
     }
 
-    public void setAccountTarget(Account accountTarget) {
-        this.accountTarget = accountTarget;
+    public void setAccountTargetId(Account accountTargetId) {
+        this.accountTargetId = accountTargetId;
     }
 }
